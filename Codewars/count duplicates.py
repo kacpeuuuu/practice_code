@@ -6,14 +6,10 @@ def duplicate_count(text):
     for i in text:
         if i in letters:
             letters[i] += 1
+            if letters[i] == 2:
+                duplicates += 1
         else:
             letters[i] = 1
             
-    for i in letters:
-        if letters[i]>1:
-            duplicates+=1
-        else:
-            pass
-    
     return duplicates
     
